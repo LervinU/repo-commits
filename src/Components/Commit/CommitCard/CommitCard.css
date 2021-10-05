@@ -1,0 +1,34 @@
+.btnHash {
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+    width: 5rem;
+    height: 2.2rem;
+    font-size: 13px;
+    color: #0645AD;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btnHash:hover {
+    border: none;
+    border-radius: 10px;
+    width: 5rem;
+    background-color: #0645AD;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cardSize {
+    /* height: 5rem; */
+}
+
+.subtitle {
+    margin-top: -15px;
+    font-size: 15px;
+}
+
+.sub {
+    margin-left: -18px;
+}
+
+.card:hover {
+    background-color: #f7f7f7;
+}
