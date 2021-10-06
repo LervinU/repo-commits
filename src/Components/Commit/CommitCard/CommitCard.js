@@ -1,33 +1,33 @@
 import './CommitCard.css';
+import moment from 'moment'
 
-const CommitCard = () => {
 
+const CommitCard = (props) => {
+    const { sha, author, commit } = props.commitObj;
     return (
-        
-            <div class="card" style={{height: '10rem'}}>
+            <div className="card mt-4" style={{height: '4.5rem'}}>
                 <div className="row">
                     <div className="col">
-                        <div class="card-body">
-                            <p style={{fontWeight: 'bold', fontSize: '13px'}}>This is some text within a card body.</p>
+                        <div className="card-body">
+                            <p style={{fontWeight: 'bold', fontSize: '13px'}}>{commit.message}</p>
                             <div className="row row-cols-auto subtitle">
                                 <div className="col my-auto">
-                                    <img style={{width: '25px', height: '25px', borderRadius: '10px'}} src="https://avatars.githubusercontent.com/u/35772097?v=4"/>
+                                    <img style={{width: '25px', height: '25px', borderRadius: '10px'}} src={author.avatar_url}/>
                                 </div>
-                                <div className="col my-auto sub" style={{fontWeight: 'bold', fontSize: '12px'}}>LervinU</div>
-                                <div className="col my-auto sub" style={{fontSize: '12px'}}>committed on Mar 5, 2020</div>
+                                <div className="col my-auto sub" style={{fontWeight: 'bold', fontSize: '12px'}}>{author.login}</div>
+                                <div className="col my-auto sub" style={{fontSize: '12px'}}>committed on {moment(commit.author.date).fromNow()}</div>
                             </div>
                         </div>
                     </div>
                     <div className="col my-auto">
-                        <div class="card-body text-end">
+                        <div className="card-body text-end">
                             <div className="dCopyHash">
-                                 <button className="btnHash">7895145</button>
+                                 <button className="btnHash">{sha.substring(0,7)}</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        
+            </div>  
     );
 }
 

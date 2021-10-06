@@ -1,23 +1,21 @@
 .btnHash {
-    border: 1px solid #f5f5f5;
+    border: 1px solid rgba(27, 31, 36, 0.15);
     border-radius: 10px;
     width: 5rem;
     height: 2.2rem;
     font-size: 13px;
-    color: #0645AD;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: #0969DA;
+    box-shadow: 2px 2px 6px #f5f5f5;
+    background-color: #F6F8FA
 }
 
 .btnHash:hover {
     border: none;
     border-radius: 10px;
     width: 5rem;
-    background-color: #0645AD;
+    background-color: #0969DA;
     color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.cardSize {
-    /* height: 5rem; */
+    box-shadow:1px solid rgba(27, 31, 36, 0.15);
 }
 
 .subtitle {
