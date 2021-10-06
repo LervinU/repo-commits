@@ -1,12 +1,16 @@
 import './App.css';
-import CommitCard from './Components/Commit/CommitCard/CommitCard';
-
+import CommitList from './Components/Commit/CommitList/CommitList';
+import TopBar from './Components/Navbar/TopBar/TopBar';
 
 function App() {
+
   return (
-    <div className="container">
-      <CommitCard />
-    </div>
+    <>
+      <TopBar name="Watch your commits" />
+      <div className="container">
+        <CommitList />
+      </div>
+    </>
   );
 }
 
