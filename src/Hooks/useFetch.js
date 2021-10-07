@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const useFetch = (URL) => {
-    const [isLoading, setLoading] = useState();
-    const [successResponse, setSuccessResponse] = useState();
-    const [failureResponse, setFailureResponse] = useState();
+    const [isLoading, setLoading] = useState(null);
+    const [successResponse, setSuccessResponse] = useState(null);
+    const [failureResponse, setFailureResponse] = useState(null);
 
     useEffect(() => {
         setLoading(true);
@@ -17,7 +17,7 @@ const useFetch = (URL) => {
             setLoading(false);
             setFailureResponse(error)
         })
-    }, []);
+    }, [URL]);
     
     return { isLoading, successResponse, failureResponse };
 }

@@ -21,7 +21,7 @@ const RepoTitle = () => {
                 <div className="col-auto float-end">
                     {repo && 
                         <div className="bgInteractions">
-                            <img style={{width: '16px', height: '16px'}} src={star}/>
+                            <img style={{width: '16px', height: '16px'}} src={star} alt="stars"/>
                             <span style={{marginLeft: '10px'}}>{repo.stargazers_count}</span>
                         </div> 
                         }
@@ -29,7 +29,7 @@ const RepoTitle = () => {
                 <div className="col-auto float-end">
                     {repo && 
                     <div className="bgInteractions">
-                        <img  style={{width: '20px', height: '20px'}} src={Watchers}/> 
+                        <img  style={{width: '20px', height: '20px'}} src={Watchers} alt="watchers"/> 
                         <span style={{marginLeft: '10px', marginTop: '-50px'}}> {repo.watchers_count} </span>
                     </div> 
                     }
