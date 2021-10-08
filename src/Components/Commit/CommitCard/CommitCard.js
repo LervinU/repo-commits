@@ -9,7 +9,7 @@ const CommitCard = (props) => {
 
     useEffect(() => {
         setHash(sha.substring(0,7));
-    }, [])
+    }, [sha])
 
     const onClickHash = () => {
         navigator.clipboard.writeText(hash);
@@ -28,7 +28,7 @@ const CommitCard = (props) => {
                             <p style={{fontWeight: 'bold', fontSize: '13px'}}>{commit.message.length > 35 ? `${commit.message.substring(0, 30)}...`: commit.message }</p>
                             <div className="row row-cols-auto subtitle">
                                 <div className="col my-auto">
-                                    <img style={{width: '25px', height: '25px', borderRadius: '10px'}} src={author.avatar_url}/>
+                                    <img style={{width: '25px', height: '25px', borderRadius: '10px'}} src={author.avatar_url} alt="avatar"/>
                                 </div>
                                 <div className="col my-auto sub" style={{fontWeight: 'bold', fontSize: '12px'}}>{author.login}</div>
                                 <div className="col my-auto sub" style={{fontSize: '12px'}}>committed {moment(commit.author.date).fromNow()}</div>

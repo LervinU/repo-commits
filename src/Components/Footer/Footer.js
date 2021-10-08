@@ -12,7 +12,7 @@ const footerStyle = {
 
     return (
         <div className="footer" style={footerStyle}>
-            <p>Made with &#128151; and &#127861; by <a href="https://github.com/LervinU" target="_blank">LervinU</a></p>
+            <p>Made with &#128151; and &#127861; by <a href="https://github.com/LervinU" target="_blank" rel="noreferrer">LervinU</a></p>
         </div>
     );
 }

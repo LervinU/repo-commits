@@ -7,7 +7,11 @@ import { useState, useEffect } from 'react';
 import Utils from '../../../Helpers/Utils';
 
 const CommitList = () => {
-const {isLoading, successResponse: commits, failureResponse: error} = useFetch('https://api.github.com/repos/LervinU/repo-commits/commits');
+/*This URL should be in an environment variable
+but due to the nature of this project. Its being
+added here as a String*/ 
+const URL = 'https://api.github.com/repos/LervinU/repo-commits/commits'; 
+const {isLoading, successResponse: commits, failureResponse: error} = useFetch(URL);
 const [page, setPage] = useState(1);
 
 const commitsObj = {};
@@ -38,7 +42,6 @@ commits && (() => {
 if(numberOfPages === page) isDisabledIncrease = true;
 if(page > 1) isDisabledDecrease = false;
 
-
 const increasePage = () => {
     setPage(page + 1);
 };
@@ -52,10 +55,10 @@ return (
         { !error ? 
             commits && Object.entries(currentPageObj).map(([key, value]) => {
                 return (
-                    <>
+                    <div key={key}>
                         <p style={{color: "#000", marginTop: '2rem', marginBottom: '5px'}}>Commits on {key}</p>
                         {value.map(commit => <CommitCard key={commit.sha} commitObj={commit} />)}
-                    </>
+                    </div>
                 )
             }):
             <h2>Something went wrong. Try again later.</h2>
